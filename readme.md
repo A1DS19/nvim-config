@@ -2,7 +2,7 @@
 
 This repository contains a complete Neovim configuration converted from Lunar Vim, featuring LSP, autocompletion, debugging, and more.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Prerequisites](#prerequisites)
