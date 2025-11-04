@@ -1,0 +1,37 @@
+{
+  "cpp23_module": {
+    "prefix": "module",
+    "body": [
+      "module ${1:module_name};",
+      "",
+      "${2:// Module implementation}"
+    ],
+    "description": "C++23 module declaration"
+  },
+  "cpp23_import": {
+    "prefix": "import",
+    "body": [
+      "import ${1:module_name};"
+    ],
+    "description": "C++23 import statement"
+  },
+  "cpp23_concepts": {
+    "prefix": "concept",
+    "body": [
+      "template<typename T>",
+      "concept ${1:ConceptName} = ${2:constraint};"
+    ],
+    "description": "C++23 concept definition"
+  },
+  "cpp23_ranges": {
+    "prefix": "ranges",
+    "body": [
+      "#include <ranges>",
+      "",
+      "auto ${1:result} = ${2:container} | std::views::${3:transform}([](auto&& ${4:item}) {",
+      "    return ${5:/* transformation */};",
+      "});"
+    ],
+    "description": "C++23 ranges usage"
+  }
+}
