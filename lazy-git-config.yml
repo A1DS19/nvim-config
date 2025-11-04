@@ -1,0 +1,57 @@
+# ~/.config/lazygit/config.yml (Linux/macOS/WSL)
+# %APPDATA%/lazygit/config.yml (Windows)
+
+gui:
+  # Theme
+  theme:
+    lightTheme: false
+    activeBorderColor:
+      - "#bd93f9"
+      - bold
+    inactiveBorderColor:
+      - "#6272a4"
+    searchingActiveBorderColor:
+      - "#ffb86c"
+      - bold
+    optionsTextColor:
+      - "#8be9fd"
+    selectedLineBgColor:
+      - "#44475a"
+    selectedRangeBgColor:
+      - "#44475a"
+    cherryPickedCommitBgColor:
+      - "#6272a4"
+    cherryPickedCommitFgColor:
+      - "#bd93f9"
+    unstagedChangesColor:
+      - "#ff5555"
+    defaultFgColor:
+      - "#f8f8f2"
+  # Window size
+  screenMode: "normal"
+  # Show file icons (requires Nerd Font)
+  showFileTree: true
+  showRandomTip: false
+  showCommandLog: false
+# Git configuration
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
+  commit:
+    signOff: false
+  merging:
+    manualCommit: false
+    args: ""
+  mainBranches: ["master", "main", "develop"]
+  autoFetch: true
+  autoRefresh: true
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --"
+# Custom commands (optional)
+customCommands:
+  - key: "C"
+    command: "git cz"
+    description: "commit with commitizen"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    output: terminal
